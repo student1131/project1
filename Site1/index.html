@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="LocalBites - A fictional restaurant website offering delicious meals and catering services">
+    <meta name="keywords" content="restaurant, food, delivery, catering, LocalBites">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.com">
+    <title>LocalBites | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" href="images/header-bg.jpg" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">
+                    <span class="sea">Sea</span><span class="restaurant">Restaurant</span>
+                </a>
+            </h1>
+            <nav>
+                <a href="#home"><i class="fas fa-anchor"></i> Home</a>
+                <a href="#menu"><i class="fas fa-fish"></i> Menu</a>
+                <a href="#about"><i class="fas fa-ship"></i> About</a>
+                <a href="#gallery"><i class="fas fa-camera"></i> Gallery</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#reservations" class="btn"><i class="fas fa-calendar-alt"></i> Reservations</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Authentic Flavors, Local Ingredients</h2>
+                <p>Experience the taste of locally-sourced, seasonal ingredients</p>
+                <a href="#menu" class="btn btn-large">View Menu</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Our Story</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Founded in 2010, LocalBites has been serving the community with passion and dedication. Our chefs combine traditional recipes with modern techniques to create unforgettable dining experiences.</p>
+                        <p>We source 90% of our ingredients from local farmers and producers, supporting our community while delivering the freshest flavors to your table.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/chef.jpg" alt="Our head chef preparing a dish" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="starters">Starters</button>
+                    <button class="category-btn" data-category="mains">Main Courses</button>
+                    <button class="category-btn" data-category="desserts">Desserts</button>
+                    <button class="category-btn" data-category="drinks">Drinks</button>
+                </div>
+                <div class="menu-items" id="menu-items-container">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Food Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/dish1.jpg" alt="Signature dish" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/dish2.jpg" alt="Seasonal special" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/dish3.jpg" alt="Dessert selection" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/dish4.jpg" alt="Chef's recommendation" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservations" class="section">
+            <div class="container">
+                <h2>Make a Reservation</h2>
+                <form id="reservation-form" method="post" action="reservation.php">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="guests" required>
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3-4">3-4 People</option>
+                            <option value="5-6">5-6 People</option>
+                            <option value="7+">7+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="special-requests" placeholder="Special Requests"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Book Table</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Visit Us</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, Cityville</p>
+                        <h3>Opening Hours</h3>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 11am - 10pm</p>
+                        <p><i class="fas fa-clock"></i> Sat-Sun: 10am - 11pm</p>
+                        <h3>Call Us</h3>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    </div>
+                    <div class="contact-form">
+                        <form action="contact.php" method="post" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LocalBites</h3>
+                    <p>Bringing local flavors to your table since 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LocalBites. All rights reserved.</p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
